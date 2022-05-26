@@ -98,9 +98,10 @@ export function Form({
           onTakeShot={handleScreenshot}
           onRemoveShot={handleScreenshotRemove}
           screenshot={screenshot}
+          isSendingFeedback={isSendingFeedback}
         />
 
-        <Button onPress={handleSendFeedback} isLoading={isSendingFeedback} />
+        <Button onPress={handleSendFeedback} isLoading={isSendingFeedback} disabled={isSendingFeedback} />
       </View>
     </View>
   );

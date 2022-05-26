@@ -9,17 +9,20 @@ interface ScreenshotButtonProps {
   screenshot: string | null;
   onTakeShot: () => void;
   onRemoveShot: () => void;
+  isSendingFeedback: boolean;
 }
 
 export function ScreenshotButton({
   screenshot,
   onTakeShot,
   onRemoveShot,
+  isSendingFeedback
 }: ScreenshotButtonProps) {
   return (
     <TouchableOpacity
-      style={styles.container}
+      style={[styles.container, isSendingFeedback && styles.buttonDisabled]}
       onPress={screenshot ? onRemoveShot : onTakeShot}
+      disabled={isSendingFeedback}
     >
       {screenshot ? (
         <View>

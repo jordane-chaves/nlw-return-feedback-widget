@@ -14,5 +14,8 @@ export const styles = StyleSheet.create({
     fontSize: 14,
     fontFamily: theme.fonts.medium,
     color: theme.colors.text_on_brand_color
+  },
+  buttonDisabled: {
+    opacity: 0.5,
   }
 });

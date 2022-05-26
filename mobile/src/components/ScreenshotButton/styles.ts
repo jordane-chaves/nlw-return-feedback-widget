@@ -20,5 +20,8 @@ export const styles = StyleSheet.create({
   image: {
     width: 40,
     height: 40
+  },
+  buttonDisabled: {
+    opacity: 0.5,
   }
 });
